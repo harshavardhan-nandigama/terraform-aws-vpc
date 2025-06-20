@@ -13,17 +13,6 @@ This Terraform module is developed for setting up the **VPC architecture of the 
 - Custom route tables for public, private, and database traffic
 - Peering connection with default VPC for cross-communication
 
----
-
-## 🔧 Input Variables
-
-| Name         | Description                            | Type   | Required | Default        |
-|--------------|----------------------------------------|--------|----------|----------------|
-| `project`    | Name of the project                    | string | ✅ Yes   | N/A            |
-| `environment`| Environment name (e.g. dev, prod)      | string | ✅ Yes   | N/A            |
-| `cidr_block` | Custom CIDR block for the VPC          | string | ❌ No    | `"10.0.0.0/16"` |
-
----
 
 ## VPC Creation Steps
 
@@ -67,15 +56,3 @@ This Terraform module is developed for setting up the **VPC architecture of the 
 20. Create a VPC peering connection with the **default VPC**  
 21. Add a route to **default VPC CIDR** in Roboshop VPC route tables  
 22. Add a route to **Roboshop VPC CIDR** in default VPC route table  
-
----
-
-## 📁 Folder Structure
-
-terraform-aws-vpc/
-├── data.tf
-├── locals.tf
-├── peering.tf
-├── readme.md
-├── variables.tf
-└── vpc.tf
