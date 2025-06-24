@@ -3,7 +3,13 @@
 This Terraform module is developed for setting up the **VPC architecture of the Roboshop project**. It is designed to be reusable, configurable, and production-ready for creating a complete VPC environment with public, private, and database subnets, route tables, NAT, and peering.
 
 ---
+## Inputs
+* Project (requred) - User should specify their project name
+* environment (requred) -User should specify their environment.
+* cidr_block (optional)- user can provide their CIDR block. Default. Default is 10.0.0.0./16
 
+## outputs
+* vpc_id - created vpc ID created
 ##  Features
 
 - Creates a highly available VPC with configurable CIDR
